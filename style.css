@@ -28,27 +28,46 @@ nav ul li a {
 #home {
     width: 100%;
     height: 95vh;
-    background-color: #10044a;
+    /* background-color: #10044a; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: end;
     align-items: center;
+}
+
+#home::before {
+    height: 95vh;
+    width: 100%;
+    content: '';
+    position: absolute;
+    opacity: .9;
+    z-index: -1;
+    background-image: url('https://wallpaperaccess.com/full/4225693.jpg');
+    background-position: top right;
+}
+
+.nameSec {
+    /* border: 1px solid white; */
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    margin: 25px;
+    padding: 25px;
 }
 
 .nameSec .name {
     font-size: 100px;
-    color: rgb(198, 196, 196);
+    color: rgb(239, 236, 236);
 }
 
 .nameSec .roll {
     font-size: 45px;
-    color: rgb(185, 185, 186);
+    color: rgb(239, 236, 236);
 }
 
 .propic img {
     width: 100%;
     height: auto;
     border-radius: 50px;
+
 }
 
 #about {
@@ -61,7 +80,7 @@ nav ul li a {
 #about .leftSec {
     display: flex;
     flex-direction: column;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     padding: 50px;
     width: 25%;
 }
@@ -91,6 +110,8 @@ nav ul li a {
 
 #about .rightSec {
     text-align: center;
+    background-color: palevioletred;
+    color: aliceblue;
     width: 75%;
     padding: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -143,19 +164,6 @@ nav ul li a {
 
 }
 
-#career::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    height: 200vh;
-    width: 100%;
-    background-image: url('https://lh5.googleusercontent.com/proxy/9jeceA86sBBEVyucqCaEHYM84z7MaBHyCYBCmlrz-wk7JCffAoHgFhxLLNO8XaHlwWkm6Z1b_LYwItmyN9hI8tLmTqnyP7lrwWQ9Fplo28Q-ei0na6W4pzBr_NSHB2PbVHvi6Gqk_7uW3VFh_Ov28l1-wIJ_NzSt5bBBA5LDA-PI8t_WzZjglzV55OZzPCWQG-wuiC8t0-fbQ_3CfefeL7SKjFcHSXY_35BrKnrZuzY=w1200-h630-p-k-no-nu');
-    background-size: contain;
-    opacity: .5;
-    background-position:top;
-    background-attachment: fixed;
-}
-
 .box {
     padding: 25px;
     margin: 40px 0;
@@ -164,27 +172,36 @@ nav ul li a {
 }
 
 #award {
-    display: flex;
-    justify-content: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 .awarded {
-    width: 50%;
+    width: 100%;
+    display: flex;
     text-align: center;
 }
 
-.awarded h1 {
+#award h1 {
     font-size: 45px;
 }
 
 .awarded p {
     font-size: 25px;
     margin: 30px 0;
+    margin: 0 20px;
+}
+.awardCont{
+    display: flex;
+    align-items: center;
 }
 
 .awarded img {
-    width: 100%;
+    width: 40%;
     height: auto;
+    margin: 30px;
+    border-radius: 50px;
 }
 
 
