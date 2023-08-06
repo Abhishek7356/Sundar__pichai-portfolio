@@ -5,7 +5,8 @@
 
 header {
     /* background-color: rgb(231, 229, 226); */
-    background-color: #10044a;
+    /* background-color: #10044a; */
+    background-color: gray;
 }
 
 nav ul {
@@ -20,7 +21,7 @@ nav ul li a {
     padding: 10px 30px;
     text-decoration: none;
     font-size: 20px;
-    color: rgb(188, 187, 187);
+    color: rgb(34, 34, 34);
     font-size: 16px;
     transition: .7s;
 }
@@ -48,7 +49,7 @@ nav ul li a {
 
 .nameSec {
     /* border: 1px solid white; */
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: 25px;
     padding: 25px;
 }
@@ -99,7 +100,7 @@ nav ul li a {
 
 .leftSec p {
     text-align: justify;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .heading {
@@ -119,7 +120,7 @@ nav ul li a {
 }
 
 .rightSec p {
-    font-size: 25px;
+    font-size: 20px;
     text-align: justify;
     margin: 25px 0;
 }
@@ -145,36 +146,56 @@ nav ul li a {
 }
 
 #career .bottomSec {
+    width: 100%;
     text-align: center;
     padding: 50px;
+    margin: 20px 0;
+    position: relative;
+    color: white;
+    background-image: linear-gradient(to right, rgb(201, 201, 201), rgb(156, 155, 155));
 }
+
 
 .bottomSec h2 {
     font-size: 45px;
 }
 
 .bottomSec h1 {
-    font-size: 35px;
-    margin: 30px 0;
+    font-size: 25px;
+    margin: 20px 0;
 }
 
 .bottomSec p {
-    font-size: 25px;
-    margin: 20px 0;
+    font-size: 15px;
+    margin: 10px 0;
 
 }
 
 .box {
+    width: 60%;
     padding: 25px;
     margin: 40px 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    left: 70px;
+    background-color: palevioletred;
 
 }
 
+.box2 {
+    width: 60%;
+    padding: 25px;
+    margin: 40px 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    right: -25%;
+    background-color: palevioletred;
+}
+
 #award {
-display: flex;
-flex-direction: column;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .awarded {
@@ -192,7 +213,8 @@ align-items: center;
     margin: 30px 0;
     margin: 0 20px;
 }
-.awardCont{
+
+.awardCont {
     display: flex;
     align-items: center;
 }
@@ -243,7 +265,6 @@ input {
 
 footer {
     display: flex;
-    flex-wrap: wrap;
     background-image: linear-gradient(to right, rgb(25, 25, 25), black);
     color: aliceblue;
     justify-content: space-around;
@@ -306,36 +327,136 @@ nav ul li a:hover {
 
     }
 
-    .nameSec .name {
-        font-size: 80px;
+    #home {
+        display: flex;
+        width: 100%;
+        align-items: end;
+        justify-content: center;
+    }
 
-        margin-left: 15px;
+    #home::before {
+        height: 100vh;
+        width: 100%;
+        background-position: top center;
+    }
+
+    .nameSec {
+        border-radius: 10px;
+    }
+
+    .nameSec .name {
+        font-size: 40px;
+        color: rgb(30, 29, 29);
     }
 
     .nameSec .roll {
-        font-size: 35px;
+        font-size: 25px;
+        color: rgb(30, 29, 29);
+    }
 
-        margin-left: 15px;
+    #about .leftSec {
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid gray; */
+        padding: 10px;
+        width: 100%;
+    }
+
+    .leftSec img {
+        width: 60%;
+        display: block;
+        margin: auto;
+    }
+
+    .leftSec h1 {
+        font-size: 35px;
+        margin: 20px 0;
+    }
+
+    .leftSec p {
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about .rightSec {
+        width: 100%;
+        padding: 10px;
+        margin: 0 0px;
+        margin-top: 20px;
+    }
+
+    .rightSec p {
+        font-size: 15px;
+        margin: 15px 0;
+    }
+
+    #career .bottomSec {
+        padding: 20px;
+        margin: 10px 0;
+    }
+
+
+    .bottomSec h2 {
+        font-size: 35px;
+    }
+
+    .bottomSec h1 {
+        font-size: 20px;
+    }
+
+    .box {
+        width: 90%;
+        padding: 10px;
+        margin: 15px 10px;
+        left: 0px;
+    }
+
+    .box2 {
+        width: 90%;
+        padding: 10px;
+        margin: 15px 10px;
+        right: 0;
+    }
+
+    .awarded {
+        flex-direction: column;
+    }
+
+    #award h1 {
+        font-size: 30px;
+        margin: 35px 0;
+    }
+
+    .awarded p {
+        font-size: 20px;
+        margin: 35px 0;
 
     }
 
-    .propic img {
-        width: 90%;
-
+    .awarded img {
+        width: 70%;
         display: block;
         margin: auto;
     }
 
     input,
     textarea {
-
         width: 90%;
     }
 
-    footer {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        padding-left: 20px;
+    #contact h1 {
+        font-size: 30px;
     }
+
+    footer {
+        flex-direction: column;
+        gap: 25px;
+        padding: 30px 30px;
+    }
+
 }
